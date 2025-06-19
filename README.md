@@ -25,31 +25,34 @@ A simple command-line application to track and manage habits.
 1. Install Python from:  
    https://www.python.org/downloads/
 
-2. Install MySQL from:  
+2. Install Git from:
+   https://git-scm.com/downloads 
+
+3. Install MySQL from:  
    https://dev.mysql.com/downloads/
 
-3. Ensure your MySQL server is running, and configure access:
+4. Ensure your MySQL server is running, and configure access:
    - Host: `localhost`
    - User: `root`
    - Password: `Mypassword` 
 
 Important: Make sure to configure your MySQL connection exactly as described above, since the application relies on these credentials to function properly.
 
-4. Clone the GitHub repository by running this code in your terminal:
+5. Clone the GitHub repository by running this code in your terminal:
+   git clone https://github.com/anothercuriousprogrammer/Habits.git
 
-git clone https://github.com/anothercuriousprogrammer/Habits.git
-cd Habits  
-# This command navigates into the newly cloned project folder
+6. Navigate to the newly created folder in your terminal:
+   cd Habits  
 
-5. Install dependencies by running this code in your terminal:
-pip install -r requirements.txt
+7. Install dependencies by running this code in your terminal:
+   pip install -r requirements.txt
 
-6. To start the application run this code in your terminal:
-python user_interface.py
+8. To start the application run this code in your terminal:
+   python user_interface.py
 
-7. To run unit tests run this code in your terminal:
-pytest test_habit_class.py
-pytest test_analytics.py
+9. To run unit tests run these codes in your terminal:
+   pytest test_habit_class.py
+   pytest test_analytics.py
 
 ## Guide to How to Use the Application
 
