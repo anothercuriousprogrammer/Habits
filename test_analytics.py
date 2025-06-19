@@ -91,14 +91,10 @@ def test_create_and_check_database(testing_cursor):
     """
     cursor, connection = testing_cursor
 
-    # Confirm that the DB doesn't exist
     assert not analytics.check_database_exists(cursor, DB_NAME)
-
-    # Create the DB
     analytics.create_database(cursor, DB_NAME)
-    connection.commit()  # commit DB creation
+    connection.commit()
 
-    # Confirm it now exists
     assert analytics.check_database_exists(cursor, DB_NAME)
 
 def test_create_sample_habits(testing_cursor):
@@ -115,7 +111,7 @@ def test_create_sample_habits(testing_cursor):
         analytics.create_habit(cursor, habit)
         count_created += 1
 
-    connection.commit()  # Commit all inserts after creation
+    connection.commit()
 
     assert count_created == 5, f"Expected to create 5 habits, but created {count_created}"
 
@@ -208,7 +204,6 @@ def test_habit_check_offs(testing_cursor):
     cursor, connection = testing_cursor
     cursor.execute(f"USE {DB_NAME}")
 
-    # Get habit IDs
     study_id = analytics.get_habit_id(cursor, SAMPLE_HABITS[0].name)
     workout_id = analytics.get_habit_id(cursor, SAMPLE_HABITS[2].name)
     meditate_id = analytics.get_habit_id(cursor, SAMPLE_HABITS[4].name)

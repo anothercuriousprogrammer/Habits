@@ -6,7 +6,7 @@ def create_database(cursor, db_name):
     """
     This function creates a MySQL database named after db_name input and three tables inside that database:
 
-    - `habits`: Stores information about each habit (name, periodicity, creation/deletion date).
+    - `habits`: Stores information about each habit (name, periodicity, creation date).
     - `check_off_dates`: Records the dates when habits are checked off.
     - `streaks`: Tracks current and longest streaks for each habit.
 
